@@ -28,6 +28,7 @@ http://www.tooplate.com/view/2109-the-card
     type="text/javascript"
     data-storefront="jolarte.qa.onfastspring.com/popup-jolarte"
     data-decorate-callback="decorateURL"
+    data-popup-closed="onFSPopupClosed"
 >
 </script>
 <!-- Google Analytics -->
@@ -57,6 +58,18 @@ ga('send', 'pageview');
 	}
        return (linkerParam ? url + '?' + linkerParam : url);
     }
+
+    function onFSPopupClosed(orderReference) {
+      if (orderReference)
+      {
+           console.log(orderReference.reference);
+           fastspring.builder.reset();
+           window.location.replace("https://jolarte-fs.github.io/thankyoupage.html?orderId="" + orderReference.reference);
+      } else {
+           console.log("no order ID");
+	  }
+    }
+
   </script>
     <!-- Loader -->
     <div id="loader-wrapper">
