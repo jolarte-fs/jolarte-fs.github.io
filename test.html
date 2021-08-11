@@ -1,0 +1,43 @@
+  
+<!--
+	Button to call the custom function to make the secure call
+-->
+<button onclick="pushToFastSpring();">Secure Checkout</button>
+
+<!--
+    Custom function to make the fastspring.builder.secure() call
+    and fastspring.builder.checkout().
+-->
+<script type="text/javascript">
+    function pushToFastSpring() {
+        fastspring.builder.secure(
+            {
+                "contact": {
+                    "email":"myName@email.com",
+                    "firstName":"John",
+                    "lastName":"Doe"
+                },
+                "items":
+                    [
+                        {
+                            "product": "digital-subscription",
+                            "quantity": 1,
+                            // "pricing": {
+                            //     "price": {
+                            //         "USD": 19.00
+                            //     }
+                            // }
+                        }
+                    ]
+            });
+        fastspring.builder.checkout();
+    }
+</script>
+
+<script
+        id="fsc-api"
+        src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
+        type="text/javascript"
+        data-storefront="taxcodenet.test.qa1.onfastspring.com/popup-taxcodenet"
+        data-access-key="F27MS9SST4W3UHRNBE1ISA">
+</script>
