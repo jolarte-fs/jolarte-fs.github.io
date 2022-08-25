@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<chargebackRetrievalResponse xmlns="http://www.litle.com/chargebacks">
+    <transactionId>2155104124</transactionId>
+    <chargebackCase>
+        <caseId>69600002</caseId>
+        <merchantId>69600</merchantId>
+        <dayIssuedByBank>2002-01-01</dayIssuedByBank>
+        <dateReceivedByLitle>2022-08-18</dateReceivedByLitle>
+        <litleTxnId>2116345918520</litleTxnId>
+        <cycle>First Chargeback</cycle>
+        <orderId>AQUIMETER EL AT ID QUE necesitemos</orderId>
+        <cardNumberLast4>0001</cardNumberLast4>
+        <cardType>VISA</cardType>
+        <chargebackAmount>20000</chargebackAmount>
+        <chargebackCurrencyType>USD</chargebackCurrencyType>
+        <originalTxnDay>2002-01-01</originalTxnDay>
+        <chargebackType>D</chargebackType>
+        <reasonCode>11.3</reasonCode>
+        <reasonCodeDescription>Allocation Flow - Authorization - No Authorization</reasonCodeDescription>
+        <currentQueue>Merchant</currentQueue>
+        <acquirerReferenceNumber>2222222222</acquirerReferenceNumber>
+        <chargebackReferenceNumber>bbbbbbbbbb</chargebackReferenceNumber>
+        <bin>410000</bin>
+        <paymentAmount>510</paymentAmount>
+        <replyByDay>2023-08-18</replyByDay>
+        <activity>
+            <activityDate>2022-08-18</activityDate>
+            <activityType>Assign To Merchant</activityType>
+            <fromQueue>Litle</fromQueue>
+            <toQueue>Merchant Automated</toQueue>
+            <notes>Please work this case</notes>
+        </activity>
+        <activity>
+            <activityDate>2022-08-18</activityDate>
+            <activityType>Receive Network Transaction</activityType>
+            <fromQueue>Litle</fromQueue>
+            <toQueue>Merchant Automated</toQueue>
+            <notes>Received network transaction</notes>
+        </activity>
+    </chargebackCase>
+</chargebackRetrievalResponse>
