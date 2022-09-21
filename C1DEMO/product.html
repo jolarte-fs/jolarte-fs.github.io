@@ -17,9 +17,30 @@
         })(window, document, 'script', 'dataLayer', 'GTM-MHPXT6K');</script>
     <!-- End Google Tag Manager -->
     <script id="fsc-api" src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.9/fastspring-builder.min.js"
-        type="text/javascript" data-storefront="cafeterosjo.test.onfastspring.com/popup-cafeterosjo">
+        type="text/javascript" data-storefront="cafeterosjo.test.onfastspring.com/popup-cafeterosjo"
+        data-popup-closed="onFSPopupClosed" data-decorate-callback="decorateCallbackURL">
         </script>
+    <script>
+        function decorateCallbackURL(url) {
+            var containerID = 'GTM-MHPXT6K';
+            var cl_id = cl_id || '';var se_id = se_id || '';
+            function gtag(){dataLayer.push(arguments);}
+            gtag('get', containerID, 'client_id', (client_id) => {cl_id = client_id;});
+            gtag('get', containerID, 'session_id', (session_id) => {se_id = session_id;});
+            while((cl_id!==''||cl_id!==''));
+            return url + '?clientId=' + cl_id + '&sessionId=' + se_id;
+        }
 
+        function onFSPopupClosed(orderReference) {
+            if (orderReference) {
+                console.log(orderReference.reference);
+                fastspring.builder.reset();
+                window.location.replace("complete.html?orderId=" + orderReference.reference);
+            } else {
+                console.log("no order ID");
+            }
+        }
+    </script>
 </head>
 
 <body>
