@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <chargebackRetrievalResponse xmlns="http://www.litle.com/chargebacks">
-    <transactionId>0000000001</transactionId>
+    <transactionId>0000000002</transactionId>
     <chargebackCase>
         <caseId>69600003</caseId>
         <merchantId>69600</merchantId>
