@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <chargebackRetrievalResponse xmlns="http://www.litle.com/chargebacks">
-    <transactionId>2155104124</transactionId>
+    <transactionId>0000000001</transactionId>
     <chargebackCase>
         <caseId>69600003</caseId>
         <merchantId>69600</merchantId>
@@ -8,8 +8,8 @@
         <dateReceivedByLitle>2022-08-18</dateReceivedByLitle>
         <litleTxnId>2116345918520</litleTxnId>
         <cycle>First Chargeback</cycle>
-        <orderId>TEST1809</orderId>
-        <cardNumberLast4>0001</cardNumberLast4>
+        <orderId>worldpay_test_3</orderId>
+        <cardNumberLast4>4242</cardNumberLast4>
         <cardType>VISA</cardType>
         <chargebackAmount>10</chargebackAmount>
         <chargebackCurrencyType>USD</chargebackCurrencyType>
@@ -21,7 +21,7 @@
         <acquirerReferenceNumber>2222222222</acquirerReferenceNumber>
         <chargebackReferenceNumber>bbbbbbbbbb</chargebackReferenceNumber>
         <bin>410000</bin>
-        <paymentAmount>510</paymentAmount>
+        <paymentAmount>108</paymentAmount>
         <replyByDay>2023-08-18</replyByDay>
         <activity>
             <activityDate>2022-08-18</activityDate>
