@@ -26,16 +26,9 @@
             var GA4containerID = 'G-Z243GWDP69';
             if(window.gtag){
                 gtag('get',GA4containerID,'client_id',(c)=>{client_id = c});
-                while(client_id==''){
-                    console.log('waiting sync');
-                }
                 var scid = '&clientId='+client_id;
             }
             return url + '?_gl=' + generateLinkerParam() + scid;
-        }
-
-        async function getID(){
-            gtag('get',GA4containerID,'client_id',(c)=>{clid = c});
         }
 
         function onFSPopupClosed(orderReference) {
