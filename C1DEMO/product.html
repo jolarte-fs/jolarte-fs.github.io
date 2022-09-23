@@ -22,13 +22,10 @@
         </script>
     <script>
         function decorateCallbackURL(url) {
-            var client_id = '';
-            var GA4containerID = 'G-Z243GWDP69';
-            if(window.gtag){
-                gtag('get',GA4containerID,'client_id',(c)=>{client_id = c});
-                var scid = '&clientId='+client_id;
+            if(window.clsid){
+                var _pl = '&clientId='+window.clsid.client_id+'&sessionId='+window.clsid.session_id;
             }
-            return url + '?_gl=' + generateLinkerParam() + scid;
+            return url + '?_gl=' + generateLinkerParam() + _pl;
         }
 
         function onFSPopupClosed(orderReference) {
