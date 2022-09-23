@@ -26,7 +26,8 @@
             var GA4containerID = 'G-Z243GWDP69';
             if(window.gtag){
                 gtag('get',GA4containerID,'client_id',(c)=>{client_id = c});
-                while(client_id==''){//do nothig
+                while(client_id==''){
+                    console.log('waiting sync');
                 }
                 var scid = '&clientId='+client_id;
             }
