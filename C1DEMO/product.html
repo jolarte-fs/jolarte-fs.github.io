@@ -27,7 +27,7 @@
                 const getClientId = new Promise(resolve => {
                     gtag('get',GA4containerID,'client_id',resolve)
                 });
-                var client_id = await getClientId();
+                var client_id = await getClientId;
                 var scid = '&clientId='+client_id;
             }
                 
