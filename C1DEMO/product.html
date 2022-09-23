@@ -25,7 +25,7 @@
             if(window.clsid){
                 var _pl = '&clientId='+window.clsid.client_id+'&sessionId='+window.clsid.session_id;
             }
-            return url + '?_gl=' + generateLinkerParam() + _pl;
+            return url /*+ '?_gl=' + generateLinkerParam() */ + _pl;
         }
 
         function onFSPopupClosed(orderReference) {
