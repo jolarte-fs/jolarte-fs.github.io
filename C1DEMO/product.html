@@ -21,10 +21,17 @@
         data-popup-closed="onFSPopupClosed" data-decorate-callback="decorateCallbackURL">
         </script>
     <script>
-        function decorateCallbackURL(url) {
-            var containerID = 'GTM-MHPXT6K';
-            
-            return url + '?_gl=' + generateLinkerParam();
+        async function decorateCallbackURL(url) {
+            var GA4containerID = 'G-Z243GWDP69';
+            if(window.gtag){
+                const getClientId = new Promise(resolve => {
+                    gtag('get',GA4containerID,'client_id',resolve)
+                });
+                var client_id = await getClientId();
+                var scid = '&clientId='+client_id;
+            }
+                
+            return url + '?_gl=' + generateLinkerParam() + scid;
         }
 
         function onFSPopupClosed(orderReference) {
