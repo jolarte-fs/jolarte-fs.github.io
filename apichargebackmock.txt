@@ -2,7 +2,7 @@
 <chargebackRetrievalResponse xmlns="http://www.litle.com/chargebacks">
     <transactionId>1234567891</transactionId>
     <chargebackCase>
-        <caseId>69600003</caseId>
+        <caseId>69600028</caseId>
         <merchantId>69600</merchantId>
         <dayIssuedByBank>2002-01-01</dayIssuedByBank>
         <dateReceivedByLitle>2022-08-18</dateReceivedByLitle>
