@@ -1,0 +1,226 @@
+{
+    "items": [
+        {
+            "dispute_id": "PP-R-WDA-10037306",
+            "create_time": "2022-09-14T16:39:47.000Z",
+            "update_time": "2022-09-19T09:01:19.000Z",
+            "disputed_transactions": [
+                {
+                    "buyer_transaction_id": "44078643S60571542",
+                    "buyer": {},
+                    "seller": {
+                        "merchant_id": "C7CYMKZDG8D6E"
+                    }
+                }
+            ],
+            "reason": "UNAUTHORISED",
+            "status": "UNDER_REVIEW",
+            "dispute_state": "RESOLVED",
+            "dispute_amount": {
+                "currency_code": "USD",
+                "value": "11.11"
+            },
+            "dispute_life_cycle_stage": "CHARGEBACK",
+            "dispute_channel": "EXTERNAL",
+            "links": [
+                {
+                    "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-WDA-10037306",
+                    "rel": "self",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "dispute_id": "PP-D-65572",
+            "create_time": "2022-06-23T11:55:16.000Z",
+            "update_time": "2022-06-28T16:23:49.000Z",
+            "disputed_transactions": [
+                {
+                    "buyer_transaction_id": "4WW557495C5476459",
+                    "buyer": {},
+                    "seller": {
+                        "merchant_id": "C7CYMKZDG8D6E"
+                    }
+                }
+            ],
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED",
+            "status": "RESOLVED",
+            "dispute_state": "RESOLVED",
+            "dispute_amount": {
+                "currency_code": "USD",
+                "value": "50.00"
+            },
+            "dispute_life_cycle_stage": "INQUIRY",
+            "dispute_channel": "INTERNAL",
+            "links": [
+                {
+                    "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-D-65572",
+                    "rel": "self",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "dispute_id": "PP-D-65560",
+            "create_time": "2022-06-23T08:49:41.000Z",
+            "update_time": "2022-07-13T08:50:40.000Z",
+            "disputed_transactions": [
+                {
+                    "buyer_transaction_id": "3XL34105DB111380H",
+                    "buyer": {},
+                    "seller": {
+                        "merchant_id": "C7CYMKZDG8D6E"
+                    }
+                }
+            ],
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED",
+            "status": "RESOLVED",
+            "dispute_state": "RESOLVED",
+            "dispute_amount": {
+                "currency_code": "USD",
+                "value": "50.00"
+            },
+            "dispute_life_cycle_stage": "INQUIRY",
+            "dispute_channel": "INTERNAL",
+            "links": [
+                {
+                    "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-D-65560",
+                    "rel": "self",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "dispute_id": "PP-D-65326",
+            "create_time": "2022-06-16T02:21:48.000Z",
+            "update_time": "2022-06-16T06:16:57.000Z",
+            "disputed_transactions": [
+                {
+                    "buyer_transaction_id": "7U908031LJ8844401",
+                    "buyer": {},
+                    "seller": {
+                        "merchant_id": "C7CYMKZDG8D6E"
+                    }
+                }
+            ],
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+            "status": "RESOLVED",
+            "dispute_state": "RESOLVED",
+            "dispute_amount": {
+                "currency_code": "USD",
+                "value": "5.00"
+            },
+            "dispute_life_cycle_stage": "CHARGEBACK",
+            "dispute_channel": "INTERNAL",
+            "links": [
+                {
+                    "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-D-65326",
+                    "rel": "self",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "dispute_id": "PP-D-65324",
+            "create_time": "2022-06-16T01:58:03.000Z",
+            "update_time": "2022-07-06T02:01:11.000Z",
+            "disputed_transactions": [
+                {
+                    "buyer_transaction_id": "9JP79869CY006914G",
+                    "buyer": {},
+                    "seller": {
+                        "merchant_id": "C7CYMKZDG8D6E"
+                    }
+                }
+            ],
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+            "status": "RESOLVED",
+            "dispute_state": "RESOLVED",
+            "dispute_amount": {
+                "currency_code": "USD",
+                "value": "7.00"
+            },
+            "dispute_life_cycle_stage": "INQUIRY",
+            "dispute_channel": "INTERNAL",
+            "links": [
+                {
+                    "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-D-65324",
+                    "rel": "self",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "dispute_id": "PP-D-65320",
+            "create_time": "2022-06-16T01:07:01.000Z",
+            "update_time": "2022-07-06T01:10:12.000Z",
+            "disputed_transactions": [
+                {
+                    "buyer_transaction_id": "94X044792U6649014",
+                    "buyer": {},
+                    "seller": {
+                        "merchant_id": "C7CYMKZDG8D6E"
+                    }
+                }
+            ],
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+            "status": "RESOLVED",
+            "dispute_state": "RESOLVED",
+            "dispute_amount": {
+                "currency_code": "USD",
+                "value": "13.00"
+            },
+            "dispute_life_cycle_stage": "INQUIRY",
+            "dispute_channel": "INTERNAL",
+            "links": [
+                {
+                    "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-D-65320",
+                    "rel": "self",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "dispute_id": "PP-D-65134",
+            "create_time": "2022-06-08T19:27:26.000Z",
+            "update_time": "2022-06-09T00:33:02.000Z",
+            "disputed_transactions": [
+                {
+                    "buyer_transaction_id": "2M7290780L929360Y",
+                    "buyer": {},
+                    "seller": {
+                        "merchant_id": "C7CYMKZDG8D6E"
+                    }
+                }
+            ],
+            "reason": "UNAUTHORISED",
+            "status": "RESOLVED",
+            "dispute_state": "RESOLVED",
+            "dispute_amount": {
+                "currency_code": "USD",
+                "value": "12.00"
+            },
+            "dispute_life_cycle_stage": "CHARGEBACK",
+            "dispute_channel": "INTERNAL",
+            "links": [
+                {
+                    "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-D-65134",
+                    "rel": "self",
+                    "method": "GET"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes",
+            "rel": "first",
+            "method": "GET"
+        }
+    ]
+}
