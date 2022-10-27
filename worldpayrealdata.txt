@@ -1,5 +1,5 @@
 
-sh-4.2$ curl -u u821926215251312686:AYbRZBuetAcJa4k https://services.vantivcnp.com/services/chargebacks/?date=2022-10-24
+
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <chargebackRetrievalResponse xmlns="http://www.litle.com/chargebacks">
     <transactionId>2627938037494</transactionId>
