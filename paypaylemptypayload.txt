@@ -1,0 +1,15 @@
+{
+    "items": [],
+    "links": [
+        {
+            "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes",
+            "rel": "first",
+            "method": "GET"
+        }
+    ]
+}
