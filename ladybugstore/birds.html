@@ -23,20 +23,61 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-      <!-- Google Tag Manager -->
-         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-         })(window,document,'script','dataLayer','GTM-NTT8KMZ');</script>
-      <!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z243GWDP69"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z243GWDP6', {
+        'cookie_flags': 'SameSite=None;Secure',
+    });
+    window.clsid = {
+        client_id: '',
+        session_id: ''
+    };
+    gtag('get', 'G-Z243GWDP6', 'client_id', function(r) {
+        window.clsid.client_id = r
+    });
+    gtag('get', 'G-Z243GWDP6', 'session_id', function(r) {
+        window.clsid.session_id = r
+    });
+
+</script>
+      <!-- FastSpring SBL -->
+      <script
+               id="fsc-api"
+               src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.9/fastspring-builder.min.js"
+               type="text/javascript"
+               data-storefront="ladybug.qa3.onfastspring.com/popup-ladybug"
+               data-popup-closed="onFSPopupClosed" 
+               data-decorate-callback="decorateCallbackURL">  
+      </script>
+      <script>
+      function decorateCallbackURL(url) {
+            if(window.clsid){
+               var _pl = '&clientId='+window.clsid.client_id+'&sessionId='+window.clsid.session_id;
+               return url + '?' + _pl;
+            }
+            return url;
+      }
+
+      function onFSPopupClosed(orderReference) {
+            if (orderReference) {
+               console.log(orderReference.reference);
+               fastspring.builder.reset();
+               window.location.replace("complete.html?orderId=" + orderReference.reference);
+            } else {
+               console.log("no order ID");
+            }
+      }
+      </script>
+      <!-- END FastSpring SBL -->
+
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTT8KMZ"
-         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->   
+     
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="" /></div>
@@ -84,8 +125,9 @@
                   </div>
                </div>
             </div>
-            <a class="read_more" style="float: right; margin-top: 60px;" href="https://ladybug.qa3.onfastspring.com/">FOUNDATION</a>
-            <a class="read_more" style="float: right; margin-top: 60px;" href="Javascript:void(0)">PINHOLE</a>
+            <a class="read_more" style="float: right; margin-top: 60px;" href="https://ladybug.qa3.onfastspring.com/">FOUNDATION</a><br/>
+            <a class="read_more" style="float: right; margin-top: 60px;" href="#" 
+               data-fsc-item-path-value='adalia-bipunctata' data-fsc-action="Add, Checkout">PINHOLE</a>
             <div class="row">
                <!-- slider bird1 -->
                <div class="col-md-7 padding_01">
