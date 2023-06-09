@@ -22,10 +22,10 @@
         </script>
     <script>
         function decorateCallbackURL(url) {
-            if(window.clsid){
-                var _pl = '&clientId='+window.clsid.client_id+'&sessionId='+window.clsid.session_id;
-            }
-            return url + '?' /*+ '?_gl=' + generateLinkerParam() */ + _pl;
+            
+            var _pl = '&clientId='+'myclient'+'&sessionId='+'mysession';
+        
+            return url + '?' + _pl;
         }
 
         function onFSPopupClosed(orderReference) {
