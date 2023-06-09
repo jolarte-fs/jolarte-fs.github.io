@@ -23,7 +23,7 @@
     <script>
         function decorateCallbackURL(url) {
             
-            var _pl = '&clientId='+'myclient'+'&sessionId='+'mysession';
+            var _pl = '&clientId='+window.clsid.client_id+'&sessionId='+window.clsid.session_id;
         
             return url + '?' + _pl;
         }
