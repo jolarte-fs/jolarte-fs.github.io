@@ -27,7 +27,7 @@
         function decorateCallbackURL(url) {
             console.log('decorateCallbackURL execution')
             if(window.clsid){
-                var _pl = '&clientId=' + window.clsid.clientId +'&sessionId='+ window.clsid.sessionId;
+                var _pl = '&clientId=' + window.clsid.client_id +'&sessionId='+ window.clsid.session_id;
             }
             return url + '?' + _pl;
         }
