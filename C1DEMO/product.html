@@ -44,7 +44,7 @@
             
                 gtag("event", "Pageview", {
                     pageTitle: 'Checkout completed',
-                    date: moment(new Date()).format("DD-MM-YYYY HH:mm:ss")
+                    date: new Date()
                 });
         }
         function decorateCallbackURL(url) {
