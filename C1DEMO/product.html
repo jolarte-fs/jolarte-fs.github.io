@@ -35,6 +35,13 @@
 
         function dataPopupWebhookReceived(data) {
             console.log(data)
+            window.dataLayer = window.dataLayer || [];
+                
+                dataLayer.push({
+                'gtm.start':
+                    new Date().getTime(), event: 'ordercomplete'
+                });
+            
                 gtag("event", "Pageview", {
                     pageTitle: 'Checkout completed',
                     date: moment(new Date()).format("DD-MM-YYYY HH:mm:ss")
