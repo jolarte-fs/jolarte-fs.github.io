@@ -35,11 +35,9 @@
 
         function dataPopupWebhookReceived(data) {
             console.log(data)
-            window.dataLayer = window.dataLayer || [];
-                dataLayer.push({
-                'event': 'Page Loaded',
-                'page_url': 'Test',
-                'page_title': 'Test123',
+                gtag("event", "Pageview", {
+                    pageTitle: 'Checkout completed',
+                    date: moment(new Date()).format("DD-MM-YYYY HH:mm:ss")
                 });
         }
         function decorateCallbackURL(url) {
