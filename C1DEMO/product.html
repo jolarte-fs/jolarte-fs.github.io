@@ -7,6 +7,9 @@
 
     <title>Landing product</title>
     <!-- Google Tag Manager -->
+
+    
+
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -15,15 +18,30 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-MHPXT6K');</script>
+
+
+
+
     <!-- End Google Tag Manager -->
     <script id="fsc-api" src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.9/fastspring-builder.min.js"
         type="text/javascript" data-storefront="cafeterosjo.test.onfastspring.com/popup-cafeterosjo"
-        data-popup-closed="onFSPopupClosed" data-decorate-callback="decorateCallbackURL">
+        data-popup-closed="onFSPopupClosed" data-decorate-callback="decorateCallbackURL"
+        data-popup-webhook-received="dataPopupWebhookReceived">
         </script>
     <script>
         
         //window.clsid = { clientId: 'viaobjectscclinetid', sessionId: 'viaobjectsessionId' }
 
+
+        function dataPopupWebhookReceived(data) {
+            console.log(data)
+            window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                'event': 'Page Loaded',
+                'page_url': 'Test',
+                'page_title': 'Test123',
+                });
+        }
         function decorateCallbackURL(url) {
             console.log('decorateCallbackURL execution')
             if(window.clsid){
@@ -41,6 +59,8 @@
                 console.log("no order ID");
             }
         }
+
+
 
         var decrypt_cookies_ids = function (a, b) {
             var P = function (a) {
@@ -226,6 +246,10 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHPXT6K" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+
+  
+
 </body>
 
 </html>
