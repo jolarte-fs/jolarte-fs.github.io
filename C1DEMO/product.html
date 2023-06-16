@@ -37,14 +37,16 @@
             console.log(data)
             window.dataLayer = window.dataLayer || [];
                 
-                dataLayer.push({
+                /* dataLayer.push({
                 'gtm.start':
                     new Date().getTime(), event: 'ordercomplete'
-                });
+                }); */
             
                 gtag("event", "Pageview", {
                     pageTitle: 'Checkout completed',
-                    date: new Date()
+                    date: new Date(),
+                    orderId: data.id,
+                    orderReference: data.reference
                 });
         }
         function decorateCallbackURL(url) {
