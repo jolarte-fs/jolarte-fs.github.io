@@ -19,13 +19,6 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-MHPXT6K');</script>
 
-// check to make sure the browser is Safari Ex. window.navigator.
-                //var isSafariBrowser = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
-                // if (isSafariBrowser) // then make the GA call
-
-                // disable GA4 complete checkout event
-
-
     <!-- End Google Tag Manager -->
     <script id="fsc-api" src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.9/fastspring-builder.min.js"
         type="text/javascript" data-storefront="cafeterosjo.test.onfastspring.com/popup-cafeterosjo"
@@ -34,46 +27,45 @@
         </script>
     <script>
 
-        //window.clsid = { clientId: 'viaobjectscclinetid', sessionId: 'viaobjectsessionId' }
+       
+    function dataPopupWebhookReceived(data) {
+        window.dataLayer = window.dataLayer || [];
+        var gtmEventParams = {
+            transaction_id: data.id,
+            value: data.totalInPayoutCurrency,
+            tax: data.taxInPayoutCurrency,
+            shipping: 0,
+            currency: data.payoutCurrency,
+            coupon: '',
+            items: []
+        };
 
-        function dataPopupWebhookReceived(data) {
-            console.log(data)
-            window.dataLayer = window.dataLayer || [];
- 
-            var gtmEventParams = {
-                transaction_id: data.id,
-                value: data.totalInPayoutCurrency,
-                tax: data.taxInPayoutCurrency,
-                shipping: 0,
-                currency: data.payoutCurrency,
-                coupon: '',
-                items: []
-            };
-
-            for (var i = 0; i < data.items.length; i++) {
-                var item = data.items[i];
-                gtmEventParams.items.push({
-                    item_id: item.product,
-                    item_name: item.product,
-                    coupon: item.coupon || '',
-                    discount: item.discountInPayoutCurrency,
-                    index: i,
-                    price: item.subtotalInPayoutCurrency,
-                    quantity: item.quantity
-                });
-                if (item.coupon) {
-                    gtmEventParams.coupon = item.coupon;
-                }
-            }
-
-            gtag("event", "purchase", {
-                pageTitle: 'Checkout completed',
-                ...gtmEventParams
+        for (var i = 0; i < data.items.length; i++) {
+            var item = data.items[i];
+            gtmEventParams.items.push({
+                item_id: item.product,
+                item_name: item.product,
+                coupon: item.coupon || '',
+                discount: item.discountInPayoutCurrency,
+                index: i,
+                price: item.subtotalInPayoutCurrency,
+                quantity: item.quantity
             });
+            if (item.coupon) {
+                gtmEventParams.coupon = item.coupon;
+            }
         }
 
+        /* gtag("event", "purchase", {
+            pageTitle: 'Checkout completed',
+            ...gtmEventParams
+        }); */
 
-
+        window.dataLayer.push("event", "purchase", {
+            pageTitle: 'Checkout completed',
+            ...gtmEventParams
+        })
+    }
 
         function decorateCallbackURL(url) {
             console.log('decorateCallbackURL execution')
