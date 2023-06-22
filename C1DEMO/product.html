@@ -56,15 +56,10 @@
             }
         }
 
-        /* gtag("event", "purchase", {
+        gtag("event", "purchase", {
             pageTitle: 'Checkout completed',
             ...gtmEventParams
-        }); */
-
-        window.dataLayer.push("event", "purchase", {
-            pageTitle: 'Checkout completed',
-            ...gtmEventParams
-        })
+        });
     }
 
         function decorateCallbackURL(url) {
