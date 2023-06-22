@@ -19,9 +19,6 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-MHPXT6K');</script>
 
-
-
-
     <!-- End Google Tag Manager -->
     <script id="fsc-api" src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.9/fastspring-builder.min.js"
         type="text/javascript" data-storefront="cafeterosjo.test.onfastspring.com/popup-cafeterosjo"
@@ -29,25 +26,31 @@
         data-popup-webhook-received="dataPopupWebhookReceived">
         </script>
     <script>
-        
-        //window.clsid = { clientId: 'viaobjectscclinetid', sessionId: 'viaobjectsessionId' }
 
+        //window.clsid = { clientId: 'viaobjectscclinetid', sessionId: 'viaobjectsessionId' }
 
         function dataPopupWebhookReceived(data) {
             console.log(data)
             window.dataLayer = window.dataLayer || [];
-                
-                /* dataLayer.push({
-                'gtm.start':
+                 dataLayer.push({
+                'CaptureOne_CheckoutStartCompletion':
                     new Date().getTime(), event: 'ordercomplete'
-                }); */
-            
-                gtag("event", "Pageview", {
+                });
+
+                // check to make sure the browser is Safari Ex. window.navigator.
+                //var isSafariBrowser = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+                // if (isSafariBrowser) // then make the GA call
+
+                // disable GA4 complete checkout event
+
+                gtag("event", "CaptureOne_CheckoutComplete", {
                     pageTitle: 'Checkout completed',
                     date: new Date(),
                     orderId: data.id,
                     orderReference: data.reference
                 });
+
+                // test and confirm that GA4 Safari.
         }
         function decorateCallbackURL(url) {
             console.log('decorateCallbackURL execution')
