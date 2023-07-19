@@ -8,10 +8,10 @@
         <dateReceivedByLitle>2022-08-18</dateReceivedByLitle>
         <litleTxnId>2116345918520</litleTxnId>
         <cycle>First Chargeback</cycle>
-        <orderId>worldpay_test_28</orderId>
+        <orderId>WPTEST1907</orderId>
         <cardNumberLast4>4242</cardNumberLast4>
         <cardType>VISA</cardType>
-        <chargebackAmount>108</chargebackAmount>
+        <chargebackAmount>7945</chargebackAmount>
         <chargebackCurrencyType>USD</chargebackCurrencyType>
         <originalTxnDay>2002-01-01</originalTxnDay>
         <chargebackType>D</chargebackType>
