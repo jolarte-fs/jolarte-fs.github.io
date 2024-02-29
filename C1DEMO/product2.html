@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Landing product</title>
+    <!-- Google Tag Manager -->
+    <script>function decorateURL(url) {
+      window.clsid = {
+         client_id: '',
+         session_id: ''
+      };
+      gtag('get', 'G-J0C0MYCDHZ', 'client_id', function(r) {
+         window.clsid.client_id = r
+      });
+      gtag('get', 'G-J0C0MYCDHZ', 'session_id', function(r) {
+         window.clsid.session_id = r
+      });
+      var _pl = '&clientId=' + window.clsid.client_id + '&sessionId=' + window.clsid.session_id;
+      return url + '?' + _pl;
+}</script>
+    <!-- End Google Tag Manager -->
+    <script id="fsc-api" src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.9.9/fastspring-builder.min.js"
+        type="text/javascript" data-storefront="qutapi.test.qa.onfastspring.com/popup-qutapi"
+        data-popup-closed="onFSPopupClosed" data-decorate-callback="decorateCallbackURL">
+        </script>
+    <script>
+        function decorateCallbackURL(url) {
+            if(window.clsid){
+                var _pl = '&clientId='+window.clsid.client_id+'&sessionId='+window.clsid.session_id;
+            }
+            return url + '?' /*+ '?_gl=' + generateLinkerParam() */ + _pl;
+        }
+
+        function onFSPopupClosed(orderReference) {
+            if (orderReference) {
+                console.log(orderReference.reference);
+                fastspring.builder.reset();
+                window.location.replace("complete.html?orderId=" + orderReference.reference);
+            } else {
+                console.log("no order ID");
+            }
+        }
+
+        var decrypt_cookies_ids = function (a, b) {
+            var P = function (a) {
+                if (encodeURIComponent instanceof Function) return encodeURIComponent(a);
+                F(28);
+                return a
+            };
+            var m = function (a, b) {
+                for (var c in b) b.hasOwnProperty(c) && (a[c] = b[c])
+            };
+
+            var H = function () {
+                var a = {};
+                var b = window.google_tag_data;
+                window.google_tag_data = void 0 === b ? a : b;
+                a = window.google_tag_data;
+                b = a.gl;
+                b && b.decorators || (b = {
+                    decorators: []
+                }, a.gl = b);
+                return b
+            };
+
+            var c = P(!!b);
+            b = H();
+            b.data || (b.data = {
+                query: {},
+                fragment: {}
+            }, c(b.data));
+            c = {};
+            if (b = b.data) m(c, b.query), a && m(c, b.fragment);
+            return c
+        }
+        var generateLinkerParam = function (a) {
+            // Function to properly grab ID's from Cookies
+            var getCookiebyName = function (name) {
+                var pair = document.cookie.match(new RegExp(name + '=([^;]+)'));
+                return !!pair ? pair[1].match(/GA1\.[0-9]\.(.+)/)[1] : undefined;
+            };
+
+            // These are the 3 values used by the new linker
+            var cookies = {
+                _ga: getCookiebyName("_ga"),
+                // Google Analytics GA ID
+                _gac: undefined,
+                // Google Remarketing
+                _gid: getCookiebyName("_gid")// Google ID
+            };
+
+            // Calculate current browser_fingerprint based on UA, time, timezone and language
+            // 
+            var browser_fingerprint = (function (a, b) {
+                var F = function (a) {
+                    // Didnt check what this does, the algo just needs F to be defined. commenting out
+                    Ne.set(a)
+                };
+                a = [window.navigator.userAgent, (new Date).getTimezoneOffset(), window.navigator.userLanguage || window.navigator.language, Math.floor((new Date).getTime() / 60 / 1E3) - (void 0 === b ? 0 : b), a].join("*");
+                if (!(b = F)) {
+                    b = Array(256);
+                    for (var c = 0; 256 > c; c++) {
+                        for (var d = c, e = 0; 8 > e; e++)
+                            d = d & 1 ? d >>> 1 ^ 3988292384 : d >>> 1;
+                        b[c] = d
+                    }
+                }
+
+                F = b;
+                b = 4294967295;
+                for (c = 0; c < a.length; c++)
+                    b = b >>> 8 ^ F[(b ^ a.charCodeAt(c)) & 255];
+                return ((b ^ -1) >>> 0).toString(36);
+            }
+            )();
+
+            // Function to hash the cookie value
+            // The following functions takes a string and returns a hash value.
+            var hash_cookie_value = function (val) {
+                var A, C, D = function (a) {
+                    A = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.";
+                    C = {
+                        "0": 52,
+                        "1": 53,
+                        "2": 54,
+                        "3": 55,
+                        "4": 56,
+                        "5": 57,
+                        "6": 58,
+                        "7": 59,
+                        "8": 60,
+                        "9": 61,
+                        "A": 0,
+                        "B": 1,
+                        "C": 2,
+                        "D": 3,
+                        "E": 4,
+                        "F": 5,
+                        "G": 6,
+                        "H": 7,
+                        "I": 8,
+                        "J": 9,
+                        "K": 10,
+                        "L": 11,
+                        "M": 12,
+                        "N": 13,
+                        "O": 14,
+                        "P": 15,
+                        "Q": 16,
+                        "R": 17,
+                        "S": 18,
+                        "T": 19,
+                        "U": 20,
+                        "V": 21,
+                        "W": 22,
+                        "X": 23,
+                        "Y": 24,
+                        "Z": 25,
+                        "a": 26,
+                        "b": 27,
+                        "c": 28,
+                        "d": 29,
+                        "e": 30,
+                        "f": 31,
+                        "g": 32,
+                        "h": 33,
+                        "i": 34,
+                        "j": 35,
+                        "k": 36,
+                        "l": 37,
+                        "m": 38,
+                        "n": 39,
+                        "o": 40,
+                        "p": 41,
+                        "q": 42,
+                        "r": 43,
+                        "s": 44,
+                        "t": 45,
+                        "u": 46,
+                        "v": 47,
+                        "w": 48,
+                        "x": 49,
+                        "y": 50,
+                        "z": 51,
+                        "-": 62,
+                        "_": 63,
+                        ".": 64
+                    };
+                    for (var b = [], c = 0; c < a.length; c += 3) {
+                        var d = c + 1 < a.length
+                            , e = c + 2 < a.length
+                            , g = a.charCodeAt(c)
+                            , f = d ? a.charCodeAt(c + 1) : 0
+                            , h = e ? a.charCodeAt(c + 2) : 0
+                            , p = g >> 2;
+                        g = (g & 3) << 4 | f >> 4;
+                        f = (f & 15) << 2 | h >> 6;
+                        h &= 63;
+                        e || (h = 64,
+                            d || (f = 64));
+                        b.push(A[p], A[g], A[f], A[h])
+                    }
+                    return b.join("")
+                };
+                return D(String(val));
+            };
+
+            // Now we have all the data Let's build the linker String! =)
+            // First value is a fixed "1" value, the current GA code does the same. May change in a future
+            return ["1", browser_fingerprint, "_ga", hash_cookie_value(cookies._ga), "_gid", hash_cookie_value(cookies._gid)].join('*');
+        }; 
+    </script>
+</head>
+
+<body>
+
+    This is the Index please go to the product
+    <a href="#" class="tm-link" data-fsc-item-path-value='2disc' data-fsc-action="Add, Checkout">Popup Frontstore</a>
+    <a href="https://quantify.test.qa.onfastspring.com/2disc" >Web Frontstore</a> 
+    <a href="productembedded.html" >Embedded Frontstore</a> 
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8RKBD" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>
